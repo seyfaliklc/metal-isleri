@@ -3,102 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paslanmaz Çelik Çözümleri | Modern Tasarım</title>
+    <title>ERDOĞAN PASLANMAZ | Mimari Metal Tasarımları</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --ana-renk: #003366; --ikinci-renk: #f8f9fa; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: var(--ana-renk); }
+        :root { --navy: #0a192f; --gold: #c5a059; --steel: #e2e8f0; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fff; color: #333; overflow-x: hidden; }
+        
+        /* Navbar */
+        .navbar { background: var(--navy); padding: 20px 0; border-bottom: 3px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .navbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.8rem; letter-spacing: -1px; }
+        .nav-link { font-weight: 600; text-transform: uppercase; font-size: 0.9rem; margin: 0 15px; transition: 0.3s; color: #fff !important; }
+        .nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+        /* Hero */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; height: 70vh; color: white; display: flex; align-items: center; text-align: center;
+            background: linear-gradient(rgba(10,25,47,0.8), rgba(10,25,47,0.8)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1920&auto=format&fit=crop');
+            height: 100vh; display: flex; align-items: center; color: white; background-size: cover; background-position: center;
         }
-        .urun-kart { transition: 0.3s; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .urun-kart:hover { transform: translateY(-10px); }
-        .footer { background-color: #222; color: white; padding: 40px 0; }
-        .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px; border-radius: 50px; text-decoration: none; z-index: 1000; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 4.5rem; font-weight: 800; line-height: 1.1; }
+        .hero span { color: var(--gold); }
+        
+        /* Kartlar ve Bölümler */
+        .section-padding { padding: 100px 0; }
+        .feature-card { border: none; border-radius: 20px; padding: 40px; background: #f8f9fa; transition: 0.4s; border-top: 5px solid transparent; }
+        .feature-card:hover { transform: translateY(-15px); border-top: 5px solid var(--gold); background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .icon-box { width: 80px; height: 80px; background: var(--navy); color: var(--gold); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 25px; }
+
+        /* WhatsApp */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(37,211,102,0.3); z-index: 1000; text-decoration: none; transition: 0.3s; }
+        .wa-float:hover { transform: scale(1.1); color: white; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">PASLANMAZ LOGO</a>
+        <a class="navbar-brand" href="index.html">ERDOĞAN <span style="color: var(--gold);">PASLANMAZ</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
-                <li class="nav-item"><a class="nav-link" href="#urunler">Ürünler</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kurumsal">Kurumsal</a></li>
-                <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="urunler.html">Ürünler</a></li>
+                <li class="nav-item"><a class="nav-link" href="kurumsal.html">Kurumsal</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <header class="hero">
-    <div class="container">
-        <h1 class="display-3 fw-bold">Kalite ve Estetiğin <br> Paslanmaz Adresi</h1>
-        <p class="lead">Korkuluk, Bayrak Direği ve Özel İmalat Çözümleri</p>
-        <a href="#iletisim" class="btn btn-primary btn-lg px-5 mt-3">Teklif Al</a>
+    <div class="container" data-aos="fade-up">
+        <h1 class="mb-4">Çeliğin <span>Estetik</span> <br> Ve Güçlü Hali</h1>
+        <p class="fs-4 mb-5 opacity-75">20 yılı aşkın süredir paslanmaz metal sektöründe <br> projenize değer katıyoruz.</p>
+        <div class="d-flex gap-3">
+            <a href="urunler.html" class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill">ÜRÜNLERİ İNCELE</a>
+            <a href="iletisim.html" class="btn btn-outline-warning btn-lg px-5 py-3 fw-bold rounded-pill">TEKLİF AL</a>
+        </div>
     </div>
 </header>
 
-<section id="urunler" class="py-5 container">
-    <h2 class="text-center mb-5 fw-bold">Ürün Gruplarımız</h2>
+<section class="section-padding container">
+    <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-12">
+            <h6 class="text-uppercase fw-bold text-warning mb-3">Neden Biz?</h6>
+            <h2 class="display-5 fw-bold" style="color: var(--navy);">Kalitede Taviz Vermiyoruz</h2>
+        </div>
+    </div>
     <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card urun-kart h-100">
-                <img src="https://via.placeholder.com/400x300?text=Korkuluk" class="card-img-top" alt="Korkuluk">
-                <div class="card-body">
-                    <h5 class="card-title">Paslanmaz Korkuluk</h5>
-                    <p class="card-text">Modern ve dayanıklı merdiven, balkon korkuluk çözümleri.</p>
-                </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                <h4 class="fw-bold">Hassas İşçilik</h4>
+                <p class="text-muted">Son teknoloji makineler ve usta ellerle milimetrik üretim yapıyoruz.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card urun-kart h-100">
-                <img src="https://via.placeholder.com/400x300?text=Bayrak+Direği" class="card-img-top" alt="Bayrak Direği">
-                <div class="card-body">
-                    <h5 class="card-title">Bayrak Direkleri</h5>
-                    <p class="card-text">Her boyda, rüzgara dayanıklı paslanmaz bayrak direkleri.</p>
-                </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h4 class="fw-bold">316 Kalite Standartı</h4>
+                <p class="text-muted">Dış hava şartlarına ve korozyona en dayanıklı malzemeleri kullanıyoruz.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card urun-kart h-100">
-                <img src="https://via.placeholder.com/400x300?text=Özel+İmalat" class="card-img-top" alt="Özel İmalat">
-                <div class="card-body">
-                    <h5 class="card-title">Özel Üretim</h5>
-                    <p class="card-text">Projenize özel paslanmaz çelik tasarım ve imalat.</p>
-                </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-truck-fast"></i></div>
+                <h4 class="fw-bold">Hızlı Teslimat</h4>
+                <p class="text-muted">Projenizi söz verdiğimiz gün, kusursuz montaj ile teslim ediyoruz.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="iletisim" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="fw-bold mb-4">Bizimle İletişime Geçin</h2>
-        <div class="row">
-            <div class="col-md-4"><i class="fas fa-phone fa-2x mb-3 text-primary"></i><p>+90 (5xx) xxx xx xx</p></div>
-            <div class="col-md-4"><i class="fas fa-envelope fa-2x mb-3 text-primary"></i><p>info@siteniz.com</p></div>
-            <div class="col-md-4"><i class="fas fa-map-marker-alt fa-2x mb-3 text-primary"></i><p>İstanbul / Türkiye</p></div>
-        </div>
-    </div>
-</section>
-
-<footer class="footer text-center">
-    <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-</footer>
-
-<a href="https://wa.me/905XXXXXXXXX" class="whatsapp-button" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın
+<a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
